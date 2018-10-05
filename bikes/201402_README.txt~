@@ -1,0 +1,53 @@
+﻿FILE LIST
+1) 201402_status_data.csv – approx. 17 million records of status data (bike and dock availability)
+2) 201402_station_data.csv – 69 records – station latitude, longitude, name, dockcount, installation date
+3) 201402_trip_data.csv – approx. 144,000 records of individual trips (aproximadamente 144,000 de registros para viagens individuais)
+4) 201402_weather_data.csv – 920 records of daily weather by city (920 registros do clima por cidade diariamente)
+
+Files contain data from 8/29/13 (system launch) to 2/28/14.
+
+1) STATUS DATA
+FILE = "201402_status_data.csv"
+-station_id: station ID number (use "201402_station_data.csv" to find corresponding station information)
+-bikes_available: number of available bikes
+-docks_available: number of available docks
+-time: date and time, PST
+
+2) STATION INFORMATION (Informações da estação)
+FILE = "201402_station_data.csv"
+-station_id: station ID number (corresponds to "station_id" in "201402_status_data.csv")
+-name: name of station
+-lat: latitude
+-long: longitude
+-dockcount: number of total docks at station (Total de docas da estacao)
+-landmark: city (San Francisco, Redwood City, Palo Alto, Mountain View, San Jose)
+-installation: date that station was installed (data de instalação da estacacao)
+
+Note: Although stations were installed prior to 8/29/13 (system launch), no station was active until launch date. Therefore, to accurately capture station popularity, we recommend adjusting all pre-launch installation dates to 8/29/13.
+Nota: Embora as estações tenham sido instaladas antes 8/29/13 (lançamento do sistema), nenhuma estação estava ativa até a data de lançamento. Portanto, para capturar com precisão a popularidade da estação, recomendamos ajustar todas as datas de instalação pré-lançamento para 8/29/13
+
+3) TRIP DATA
+FILE = "201402_trip_data.csv"
+-Trip ID: numeric ID of bike trip(Número ID para a viagem da bicicletas )
+-Duration: time of trip in seconds(Duração da viagem em segundos)
+-Start Date: start date of trip with date and time, in PST(Data e hora de inicio da viagem )
+-Start Station: station name of start station(Nome da estação de partida) 
+-Start Terminal: numeric reference for start station (Número de referencia para partida da stação)
+-End Date: end date of trip with date and time, in PST(Data e hora final da chegada)
+-End Station: station name for end station (Nome da estação de chegada)
+-End Terminal: numeric reference for end station (Número do terminal na estação para a chegada )
+-Bike #: ID of bike used (ID da bicicleta usada)
+-Subscription Type: Subscriber = annual member; Customer = 24-hour or 3-day member (Tipo de assinante 'membro anual', 'membro de 24 horas' ou '3 dias')
+-Zip Code: Home zip code of user (only available for annual members) - Código postal local do usuário (disponível apenas para membros anuais)
+
+4) WEATHER DATA
+FILE = "201402_weather_data.csv"
+Daily weather information per service area. Weather is listed from north to south (San Francisco, Redwood City, Palo Alto, Mountain View, San Jose).
+	
+-Max_Visibility_Miles 	Note-No local Mountain View historical visibility data- reported from Palo Alto station	
+-Mean_Visibility_Miles 	Note-No local Mountain View historical visibility data- reported from Palo Alto station	
+-Min_Visibility_Miles 	 Note-No local Mountain View historical visibility data- reported from Palo Alto station		
+-Precipitation_In 	"numeric, in form x.xx but alpha ""T""= trace when amount less than .01 inch"	
+-Cloud_Cover 	"scale of 0-8, 0=clear"	
+-Events	"text field - entries: rain, fog, thunderstorm"	
+-zip code: 94107=San Francisco, 94063=Redwood City, 94301=Palo Alto, 94041=Mountain View, 95113= San Jose"	

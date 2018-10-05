@@ -1,0 +1,111 @@
+módulos favoritos
+    csv: muito conveniente para ler e escrever arquivos csv
+    collections: extensões úteis dos tipos de dados habituais, incluindo OrderedDict, defaultdict e namedtuple
+    random: gera números pseudo-aleatórios, embaralha sequências aleatoriamente e escolhe itens aleatórios
+    string: mais funções em strings. Este módulo também contém coleções úteis de letras como string.digits (uma string contendo todos os caracteres com dígitos válidos).
+    re: padronização em strings através de expressões regulares
+    math: algumas funções matemáticas padrão
+    os: interagindo com sistemas operacionais
+    os.path: submódulo de os para manipular nomes de caminho
+    sys: trabalhar diretamente com o interpretador Python
+    json: bom para ler e escrever arquivos json (bom para o trabalho na web)
+
+blibioteca de terceiros que são mais usadas
+
+    IPython - Um melhor interpretador interativo de Python.
+    requests - Fornece métodos fáceis de usar para fazer solicitações na web.
+    Flask - Uma estrutura leve para fazer aplicações web e APIs.
+    Django - Uma estrutura com mais recursos para fazer aplicações web. O Django é particularmente bom para projetar, usar com conteúdo pesado e aplicações web.
+    Beautiful Soup - Usado para analisar HTML e extrair informações dele. Ótimo para web scraping.
+    pytest - Estende Python construído em asserções e módulo de teste de unidade.
+    PyYAML - Para ler e escrever arquivos YAML.
+    NumPy - O pacote fundamental para computação científica com Python. Contém, entre outras coisas, um poderoso objeto de matriz N-dimensional e capacidades úteis de álgebra linear.
+    pandas - Uma biblioteca contendo alto desempenho, estruturas de dados e ferramentas de análise de dados. Em particular, o Pandas fornece dataframes!
+    matplotlib - Uma biblioteca 2D de plotagem que produz qualidade de publicação de figuras em uma variedade de formatos impressos e ambientes interativos.
+    ggplot - Outra biblioteca de plotagem 2D, baseada na biblioteca ggplot2 de R.
+    Pillow - Uma biblioteca de imagens do Python que adiciona recursos de processamento de imagem ao seu intérprete Python.
+    pyglet - Um framework de aplicação multiplataforma, destinado ao desenvolvimento de jogos.
+    Pygame - Um conjunto de módulos Python projetado para escrever jogos.
+    pytz - Definições de fusos-horários mundial para Python.
+
+
+Exemplo pacote de time zone
+from datetime import datetime
+
+import pytz
+
+utc = pytz.utc # utc significa "tempo universal coordenado"
+ist = pytz.timezone('Asia/Kolkata') # IST é hora padrão da Índia
+
+now = datetime.datetime.now(tz=utc) # é a hora atual em UTC
+ist_now = now.astimezone(ist) # é a hora atual em IST.
+
+
+instalar todas as dependencias de um projeto
+ pip3 install -r requirements.txt
+
+Exponenciação 2 ** 10 isso é igual a 2 elevado a 10
+Traduzir essas paginas
+https://docs.python.org/3/library/math.html#module-math
+https://pymotw.com/3/
+biblioteca de terceiros
+https://pypi-ranking.info/alltime
+
+    ls : Lista o conteúdo do diretório atual
+    cd : Vai para outro diretório
+    pwd : Imprime o endereço do diretório atual
+    open : Abre um arquivo no Mac
+        (no Linux, o comando equivalente é xdg-open. No Windows, pode ser open ou start)
+    touch : Cria um arquivo em branco (se um arquivo com o nome desejado já existir, ele não é alterado)
+    mkdir : Cria uma pasta vazia
+    rm : Apaga um arquivo
+    rmdir : Apaga um diretório vazio
+    rm -r : Apaga um diretório e todo o seu conteúdo (sem nenhuma confirmação. Tenha cuidado!)
+
+#Instalando django, vai instalar a versão mais recente
+pip install django
+#Da o inicio para o projeto django colocando nome da pasta e . entende que está dentro da pasta do projeto e não precisa criar a mesma.
+django-admin startproject djangoecomerce .
+#vai executar o servidor django na porta 8000
+./manage.py runserver
+#Permite qualquer pessoa acessar o app estando na mesma rede usando o IP da máquina, usando normalmente quando estárodando em uma maquina virtual
+./manage.py runserver 0.0.0.0:8000
+
+# usado para trabalhar com virtualenv
+# esse é usado principalmente para trabalhar com dados
+
+
+#para sair de um ambiente virtual
+deactivate
+#para selecionar um ambiente virtual
+virtualenv nome_do_ambiente
+#################Ambiente virtual criados#######################
+#permite criar ambiente virtual e qual a versão do python usar
+virtualenv venv -p python3.5
+#aplicar ambiente virtual como padrão
+source venv/bin/activate
+
+#permite criar ambiente virtual python2.7
+virtualenv venv-27 -p python2.7
+#aplicar ambiente virtual como padrão
+source venv-27/bin/activate
+
+
+
+
+#####################Instalação Ipython Notebook no linux##############################
+sudo apt-get install ipython-notebook python-matplotlib
+# Atualizando o sistema
+pip install notebook --upgrade
+#startando a aplicação Notebook
+ipython notebook
+
+#Comando para instalar o jupyter
+pip install jupyter
+
+
+#Erro conversão json 4 para 3  "Unreadable Notebook: Unsupported JSON nbformat version 4 (supported version: 3)"
+#precisou instalar esse pacote
+sudo apt-get install python-pygments
+# executar esse comando de conversão para o documento
+ipython nbconvert --to notebook --nbformat=3 l1-starter-code.ipynb
